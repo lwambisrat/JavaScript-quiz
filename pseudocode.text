@@ -1,0 +1,135 @@
+// question 1 pseudocode
+   
+      Input
+    orderId=Int
+    items= array of object
+    status=string
+       
+        Process
+
+step1 : Create a class called CustomerOrder.
+step2 : The class has these attributes called
+-orderId (a string)
+-items (an array of objects; each object has name, quantity, and price)
+-status (a string)
+step3 : define a method called calculateTotal() that returns the
+ total order amount and Start with a total of 0. 
+For each item in items:
+Multiply quantity and price, then add to total finaly Return the total amount
+step4 : define async method processPayment() that Wait for 2 seconds (simulate payment processing) 
+step4 : After waiting, set status to "paid"
+Print "Payment successful!"
+      
+      output
+Return thetotal amount
+change status to paid
+return a promise that returns after 2 second
+
+
+
+
+
+
+// question 2 pseudocode
+   
+       
+     input
+        name= string
+        role=string 
+        tasks=array of objects with title=string ,completed= boolean
+
+     process
+
+step1 : Create a class called TeamMember.
+step2 : The class has attributes called:
+  -name 
+  -role 
+  -tasks 
+step3 : define a method called completeTask(taskTitle) then
+Go through each task in the tasks array.
+If the task’s title matches taskTitle, set completed to true.
+step4 : define another method called checkProgress():
+Check if every task in the tasks array has completed set to true.
+If all are true, return a Promise that resolves with "All tasks completed!".
+If any are false, return a Promise that rejects with "Pending tasks remaining".
+      
+      output
+The task with matching title
+Return the promise if completed or not
+
+
+
+
+
+
+
+// question 3 pseudocode
+      Input
+Candidate name (string)
+Candidate position (string)
+Interview date (string)
+
+      Process 
+step 1: Create a Candidate class that contains attribute called:
+   -name
+   -position
+   -interviews (array of {date, status})
+step2 : define a method scheduleInterview(date) and add an object {date: date, status: "pending"} to interviews
+step3 : Write an async function sendConfirmation() that Wait for 1 second
+step4 : Return a Promise that resolves with "Interview confirmed with [name]" and Log the confirmation message
+
+
+    Output
+Confirmation message: "Interview confirmed with [name]"
+
+// question 4 pseudocode
+
+    Input
+Course title = string
+Instructor name =string
+Students =array of objects, each with name(String) and progress(Int)
+
+
+    Process (Pseudocode)
+step1 : Create a Course class with that has attribute called:
+  -title
+  -instructor
+  -students (array of {name, progress})
+step2 :define a method updateProgress(studentName, value)
+step3 : Find the student by name in the students array and update that student’s progress to value.
+step4 : define async method generateCertificate(studentName) then find the student by name.
+If the student’s progress is 100, resolve with "Certificate generated for [studentName]".
+If not, reject with "Incomplete progress".
+
+
+        Output
+Updated student progress=number
+Certificate generation result:
+Resolves with a certificate message if progress is 100
+Rejects with "Incomplete progress" if progress is less than 100
+
+
+
+
+
+// question 5 pseudocode
+
+      Input
+Array of stocks for the watchlist 
+Stock symbol=string
+new price=number 
+
+    Process 
+step1 : Create a StockTracker class with a attribute:
+    -watchlist (array of {symbol, threshold, currentPrice})
+step2 : defne a method updatePrice(symbol, newPrice) and find the stock in the watchlist by symbol
+and Update its currentPrice to newPrice.
+step3 : define async method checkAlerts() then Go through all stocks in the watchlist and Create a list of stocks where currentPrice >= threshold
+If the list is not empty, resolve the Promise with this list
+If the list is empty, reject the Promise with "No alerts triggered"
+
+         Output
+Updated watchlist with new current prices
+When checkAlerts is called:
+If any stocks meet or exceed their threshold, return a list of those stocks (resolve the Promise)
+If no stocks do, reject the Promise with "No alerts triggered"
