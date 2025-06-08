@@ -1,6 +1,6 @@
 # Project Summary
 
-This project includes modules for handling customer orders with payment simulation, managing team tasks with progress tracking, scheduling and confirming job candidate interviews, tracking student progress and generating course certificates, and monitoring stock prices to trigger alerts. Together, these components showcase how object-oriented patterns and async/await can be used to solve common business and workflow challenges in a clean and modular way.
+This project includes modules for handling customer orders with payment simulation, managing team tasks with progress tracking, scheduling and confirming job candidate interviews, tracking student progress and generating course certificates, and monitoring stock prices to trigger alerts. Together, these components showcase how object-oriented patterns and async/await can be used to solve common business and workflow  challenges in a clean and modular way.
 
 ## CustomerOrder
 
